@@ -12,4 +12,4 @@ runs:
   steps:
     - name: Run Parallel Secret Detection
       shell: bash
-      run: sudo ${{ github.action_path }}/parallel-secret-detection ${{ inputs.args }}
+      run: ${{ github.action_path }}/parallel-secret-detection ${{ inputs.args }}
