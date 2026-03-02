@@ -1,0 +1,15 @@
+name: "Run Parallel Secret Detection"
+description: "Runs Parallel Secret Detection"
+
+inputs:
+  args:
+    description: "Arguments passed to Parallel Secret Detection"
+    required: false
+    default: ""
+
+runs:
+  using: "composite"
+  steps:
+    - name: Run Parallel Secret Detection
+      shell: bash
+      run: sudo ${{ github.action_path }}/parallel-secret-detection ${{ inputs.args }}
